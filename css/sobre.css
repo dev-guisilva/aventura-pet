@@ -8,7 +8,7 @@ body {
     font-family: 'Baloo 2', cursive;
     background-color: #fffaf5;
     color: #333;
-    padding-top: 80px; /* Compensa header fixo */
+    padding: 20px;
 }
 
 /* Header fixo e organizado */
@@ -20,7 +20,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header .container {
@@ -30,16 +30,102 @@ header .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    color: white;
 }
 
 .logo {
     display: flex;
     align-items: center;
+    color: white;
 }
 
 .logo img {
     height: 50px;
     margin-right: 10px;
+}
+
+.logo-link {
+    display: flex;
+    /* coloca logo e texto lado a lado */
+    align-items: center;
+    /* alinha verticalmente */
+    gap: 10px;
+    /* espaço entre logo e texto */
+    text-decoration: none;
+    /* remove sublinhado do link */
+    color: white;
+}
+
+.user-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 22px;
+    transition: color 0.3s;
+}
+
+.user-icon:hover {
+    color: #ffcc00;
+}
+
+/* ===== Ícone do usuário com dropdown ===== */
+.menu-icone {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icone>i {
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.menu-icone>i:hover {
+    color: #ffcc00;
+}
+
+/* Submenu escondido por padrão */
+.menu-opcoes {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    left: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+    min-width: 140px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.menu-opcoes li {
+    padding: 0;
+}
+
+.menu-opcoes li a {
+    display: block;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: #333;
+}
+
+.menu-opcoes li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Mostrar submenu no hover ou foco */
+.menu-icone:hover .menu-opcoes,
+.menu-icone:focus-within .menu-opcoes {
+    display: flex;
 }
 
 /* Menu Desktop */
@@ -123,7 +209,7 @@ section {
     margin-bottom: 2rem;
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.8s ease forwards;
@@ -141,7 +227,7 @@ section {
 /* Efeito de hover para destacar cada bloco */
 section:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
 /* Títulos dentro das sections */
@@ -173,7 +259,7 @@ section ul {
     section {
         padding: 1.5rem;
     }
-    
+
     section h2 {
         font-size: 1.5rem;
     }
