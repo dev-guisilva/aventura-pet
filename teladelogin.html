@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Aventura Pet</title>
-    <link rel="stylesheet" href="teladelogin.css">
+    <link rel="stylesheet" href="/css/teladelogin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -23,11 +23,12 @@
             <input type="email" class="email" placeholder="Continuar com Email">
         </div>
 <div class="input-container">
+    <i class="fas fa-lock"></i>
     <input type="password" class="password" placeholder ="Continuar com Senha">
 </div>
         <br>
         <button type="submit" form="form" class="continue-button">Continuar</button>
-        <h2>Problemas para entrar?</h2>
+        <a href=""><h2 class="facalogin">Esqueceu sua senha?</h2></a>
 
         <!-- Alert for wrong password -->
         <div id="alert" class="alert">
@@ -35,37 +36,7 @@
             <span class="close-btn">&times;</span>
         </div>
 
-        <script>
-            const alertDiv = document.getElementById('alert');
-            const closeBtn = document.querySelector('.close-btn');
-            const continueBtn = document.querySelector('.continue-button');
-            const passwordInput = document.querySelector('.password');
-
-            // Function to show alert
-            function showAlert() {
-                alertDiv.style.display = 'block';
-                // Auto-hide after 3 seconds
-                setTimeout(() => {
-                    alertDiv.style.display = 'none';
-                }, 3000);
-            }
-
-            // Close alert on X click
-            closeBtn.addEventListener('click', () => {
-                alertDiv.style.display = 'none';
-            });
-
-            // Simple validation: if password is not 'correct', show alert
-            continueBtn.addEventListener('click', (e) => {
-                e.preventDefault(); // Prevent form submission if any
-                if (passwordInput.value !== 'correct') {
-                    showAlert();
-                } else {
-                    // Proceed, maybe redirect or something
-                    alert('Login successful!');
-                }
-            });
-        </script>
+        <script src="/js/teladelogin.js"></script>
 
 </body>
 

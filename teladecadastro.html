@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Aventura Pet</title>
+    <link rel="stylesheet" href="/css/teladelogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <img class="logo" src="assets/logo aventura pet.png" alt="logo aventura pet">
+    <br>
+    <p>Ao tocar em "Cadastrar", você concorda com nossos termos. Saiba como processamos seus dados em nossa <u>Política
+            de
+            Privacidade</u> e <u>Política de Cookies</u>.
+    <p>
+        <br>
+    <div class="input-container">
+        <i class="fas fa-user"></i>
+        <input type="text" class="name" placeholder="Nome">
+    </div>
+    <div class="input-container">
+        <i class="fas fa-envelope"></i>
+        <input type="email" class="email" placeholder="Email">
+    </div>
+    <div class="input-container">
+        <i class="fas fa-lock"></i>
+        <input type="password" class="password" placeholder="Senha">
+    </div>
+    <br>
+    <button type="submit" form="form" class="continue-button">Cadastrar</button>
+
+    <h2>Já tem uma conta?</h2>
+    <h2><a href="teladelogin.html" class="facalogin">Faça login</a></h2>
+
+    <!-- Alert for errors -->
+    <div id="alert" class="alert">
+        <span class="alert-message">Erro no cadastro</span>
+        <span class="close-btn">&times;</span>
+    </div>
+
+    <script src="/js/teladecadastro.js"></script>
+
+</body>
+
+</html>
