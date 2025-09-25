@@ -1,42 +1,169 @@
-<main>
-    <h2 class="titulo-pagina">🛒 Produtos para seu pet</h2>
-
-    <!-- Barra de filtros e busca -->
-    <section class="filtros">
-        <div class="categorias">
-            <button data-categoria="todos" class="ativo">Todos</button>
-            <button data-categoria="racao">Rações</button>
-            <button data-categoria="brinquedo">Brinquedos</button>
-            <button data-categoria="acessorio">Acessórios</button>
+    <!-- Hero Section -->
+    <section id="marketplace-hero" class="hero-section">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
         </div>
-        <div class="busca">
-            <input type="text" id="campoBusca" placeholder="Buscar produto...">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text animate-fade-in-up">
+                    <h1 class="hero-title">
+                        <span class="title-highlight">Produtos</span> para<br>
+                        seu Pet
+                    </h1>
+                    <p class="hero-subtitle">
+                        Tudo que seu companheiro precisa para uma vida feliz e saudável.
+                        <span class="text-highlight">Qualidade e carinho em cada item.</span>
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#produtos" class="cta-btn primary">
+                            <i class="fas fa-shopping-cart"></i>
+                            Explorar Produtos
+                        </a>
+                        <a href="#categorias" class="cta-btn secondary">
+                            <i class="fas fa-tags"></i>
+                            Ver Categorias
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-stats animate-fade-in-right">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="500">0</div>
+                        <div class="stat-label">Produtos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="50">0</div>
+                        <div class="stat-label">Marcas</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="24">0</div>
+                        <div class="stat-label">Entrega Rápida</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
-    <div class="produtos">
-        <div class="card" data-categoria="racao">
-            <img src="/img/OIP.webp" alt="Ração Premium">
-            <h3>Ração Premium Gatos - 10kg</h3>
-            <p>Nutrição completa para gatos adultos.</p>
-            <span class="preco">R$ 279,90</span>
-            <button>Adicionar ao carrinho</button>
+    <!-- Filtros Section -->
+    <section id="categorias" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Categorias</h2>
+                <p class="section-subtitle">Encontre exatamente o que seu pet precisa</p>
+                <div class="section-divider"></div>
+            </div>
+            <div class="filtros">
+                <div class="categorias">
+                    <button data-categoria="todos" class="categoria-btn ativo">
+                        <i class="fas fa-th-large"></i>
+                        Todos
+                    </button>
+                    <button data-categoria="racao" class="categoria-btn">
+                        <i class="fas fa-utensils"></i>
+                        Rações
+                    </button>
+                    <button data-categoria="brinquedo" class="categoria-btn">
+                        <i class="fas fa-gamepad"></i>
+                        Brinquedos
+                    </button>
+                    <button data-categoria="acessorio" class="categoria-btn">
+                        <i class="fas fa-heart"></i>
+                        Acessórios
+                    </button>
+                </div>
+                <div class="busca">
+                    <div class="search-container">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="campoBusca" placeholder="Buscar produto...">
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="card" data-categoria="brinquedo">
-            <img src="/img/OIP (1).webp" alt="Casinha de madeira">
-            <h3>Casa de Madeira para seu Pet</h3>
-            <p>Ideal para a saúde dental e diversão.</p>
-            <span class="preco">R$ 149,90</span>
-            <button>Adicionar ao carrinho</button>
+    <!-- Produtos Section -->
+    <section id="produtos" class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Produtos em Destaque</h2>
+                <p class="section-subtitle">Seleção especial para o bem-estar do seu pet</p>
+                <div class="section-divider"></div>
+            </div>
+            <div class="products-carousel">
+                <div class="carousel-container">
+                    <button class="carousel-btn prev" aria-label="Anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-track">
+                        <div class="product-card" data-categoria="racao">
+                            <div class="product-image">
+                                <img src="/img/OIP.webp" alt="Ração Premium Gatos" loading="lazy">
+                                <div class="product-badge">
+                                    <span>-15%</span>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Ração Premium Gatos - 10kg</h3>
+                                <div class="product-price">
+                                    <span class="price-current">R$ 279,90</span>
+                                    <span class="price-original">R$ 329,90</span>
+                                </div>
+                                <button class="buy-btn">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Comprar Agora
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card" data-categoria="brinquedo">
+                            <div class="product-image">
+                                <img src="/img/OIP (1).webp" alt="Casa de Madeira para Pet" loading="lazy">
+                                <div class="product-badge">
+                                    <span>-20%</span>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Casa de Madeira para Pet</h3>
+                                <div class="product-price">
+                                    <span class="price-current">R$ 149,90</span>
+                                    <span class="price-original">R$ 187,90</span>
+                                </div>
+                                <button class="buy-btn">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Comprar Agora
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card" data-categoria="acessorio">
+                            <div class="product-image">
+                                <img src="/img/pote de ração.webp" alt="Pote de Ração Automático" loading="lazy">
+                                <div class="product-badge">
+                                    <span>-10%</span>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Pote de Ração Automático</h3>
+                                <div class="product-price">
+                                    <span class="price-current">R$ 99,90</span>
+                                    <span class="price-original">R$ 111,90</span>
+                                </div>
+                                <button class="buy-btn">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Comprar Agora
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn next" aria-label="Próximo">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="carousel-dots">
+                    <button class="dot active" data-slide="0"></button>
+                    <button class="dot" data-slide="1"></button>
+                    <button class="dot" data-slide="2"></button>
+                </div>
+            </div>
         </div>
-
-        <div class="card" data-categoria="acessorio">
-            <img src="/img/pote de ração.webp" alt="Pote de ração">
-            <h3>Pote de ração automático</h3>
-            <p>Perfeita para alimentação do seu pet.</p>
-            <span class="preco">R$ 99,90</span>
-            <button>Adicionar ao carrinho</button>
-        </div>
-    </div>
-</main>
+    </section>

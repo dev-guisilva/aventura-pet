@@ -1,19 +1,53 @@
-
-    <img class="logo" src="/img/logo aventura pet.png" alt="logo aventura pet">
-    <br>
-    <p>Ao tocar em "Continuar", você concorda com nossos termos. Saiba como processamos seus dados em nossa <u>Política
-            de
-            Privacidade</u> e <u>Política de Cookies</u>.
-    <p>
-        <br>
-        <div class="input-container">
-            <i class="fas fa-envelope"></i>
-            <input type="email" class="email" placeholder="Continuar com Email">
+<!-- Hero Section for Login -->
+    <section id="login-hero" class="hero-section">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
         </div>
-<div class="input-container">
-    <input type="password" class="password" placeholder ="Continuar com Senha">
-</div>
-        <br>
-        <button type="submit" form="form" class="continue-button">Continuar</button>
-        <h2>Problemas para entrar?</h2>
-
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text animate-fade-in-up">
+                    <div class="login-logo" style="text-align: center; margin-bottom: var(--spacing-2xl);">
+                        <img src="/img/logo aventura pet.png" alt="Logo Aventura Pet" style="max-width: 200px; height: auto;">
+                    </div>
+                    <h1 class="hero-title">
+                        Bem-vindo de <span class="title-highlight">volta</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Entre na sua conta para continuar a aventura com seus pets.
+                        <span class="text-highlight">Conecte-se com a comunidade.</span>
+                    </p>
+                </div>
+                <div class="login-form animate-fade-in-right" style="background: rgba(255, 255, 255, 0.95); padding: var(--spacing-3xl); border-radius: var(--radius-2xl); box-shadow: 0 20px 40px var(--shadow-heavy); max-width: 400px; width: 100%;">
+                    <form id="loginForm">
+                        <div class="form-group" style="margin-bottom: var(--spacing-lg);">
+                            <label for="email" style="display: block; margin-bottom: var(--spacing-sm); font-weight: 600; color: var(--text-dark);">Email</label>
+                            <div class="input-container">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="email" name="email" placeholder="Digite seu email" required style="width: 100%; padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) 3rem; border: 2px solid var(--border-light); border-radius: var(--radius-lg); font-size: var(--font-size-base); transition: border-color var(--transition-base);">
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-bottom: var(--spacing-xl);">
+                            <label for="password" style="display: block; margin-bottom: var(--spacing-sm); font-weight: 600; color: var(--text-dark);">Senha</label>
+                            <div class="input-container">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="password" name="password" placeholder="Digite sua senha" required style="width: 100%; padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) 3rem; border: 2px solid var(--border-light); border-radius: var(--radius-lg); font-size: var(--font-size-base); transition: border-color var(--transition-base);">
+                            </div>
+                        </div>
+                        <button type="submit" class="cta-btn primary" style="width: 100%; margin-bottom: var(--spacing-lg);">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Entrar
+                        </button>
+                        <div class="login-links" style="text-align: center;">
+                            <a href="/recuperar-conta" style="color: var(--primary-blue); text-decoration: none; font-weight: 500;">Esqueceu a senha?</a>
+                            <br>
+                            <span style="color: var(--text-light);">Não tem conta? </span>
+                            <a href="/nova-conta" style="color: var(--accent-yellow); font-weight: 600; text-decoration: none;">Cadastre-se</a>
+                        </div>
+                    </form>
+                    <div class="login-footer" style="margin-top: var(--spacing-xl); padding-top: var(--spacing-lg); border-top: 1px solid var(--border-light); text-align: center; font-size: var(--font-size-sm); color: var(--text-light);">
+                        <p>Ao entrar, você concorda com nossos <a href="#" style="color: var(--primary-blue);">Termos de Uso</a> e <a href="#" style="color: var(--primary-blue);">Política de Privacidade</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

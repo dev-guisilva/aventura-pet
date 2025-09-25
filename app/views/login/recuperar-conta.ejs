@@ -1,7 +1,44 @@
-<main>
-    <form action="/login/recuperar" method="post">
-        <labe>Email</labe>
-        <input type="email" name="emailUsuario">
-        <input type="submit" value="verificar">
-    </form>
-</main>
+<!-- Hero Section for Password Recovery -->
+    <section id="recovery-hero" class="hero-section">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text animate-fade-in-up">
+                    <h1 class="hero-title">
+                        Recuperar <span class="title-highlight">Conta</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Digite seu email para receber instruções de recuperação de senha.
+                        <span class="text-highlight">Vamos ajudar você a voltar à aventura!</span>
+                    </p>
+                </div>
+                <div class="recovery-form animate-fade-in-right" style="background: rgba(255, 255, 255, 0.95); padding: var(--spacing-3xl); border-radius: var(--radius-2xl); box-shadow: 0 20px 40px var(--shadow-heavy); max-width: 400px; width: 100%;">
+                    <form action="/login/recuperar" method="post">
+                        <div class="form-group" style="margin-bottom: var(--spacing-xl);">
+                            <label for="emailUsuario" style="display: block; margin-bottom: var(--spacing-sm); font-weight: 600; color: var(--text-dark);">Email</label>
+                            <div class="input-container">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="emailUsuario" name="emailUsuario" placeholder="Digite seu email" required style="width: 100%; padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) 3rem; border: 2px solid var(--border-light); border-radius: var(--radius-lg); font-size: var(--font-size-base); transition: border-color var(--transition-base);" autofocus>
+                            </div>
+                            <p style="margin-top: var(--spacing-sm); font-size: var(--font-size-sm); color: var(--text-light);">Verifique se o email está correto para receber as instruções.</p>
+                        </div>
+
+                        <button type="submit" class="cta-btn primary" style="width: 100%; margin-bottom: var(--spacing-lg);">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Instruções
+                        </button>
+                    </form>
+
+                    <div class="recovery-links" style="text-align: center;">
+                        <a href="/login" style="color: var(--primary-blue); text-decoration: none; font-weight: 500;">Voltar ao Login</a>
+                    </div>
+
+                    <div class="recovery-footer" style="margin-top: var(--spacing-xl); padding-top: var(--spacing-lg); border-top: 1px solid var(--border-light); text-align: center; font-size: var(--font-size-sm); color: var(--text-light);">
+                        <p>Não recebeu o email? Verifique sua caixa de spam ou <a href="#" style="color: var(--primary-blue);">entre em contato</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

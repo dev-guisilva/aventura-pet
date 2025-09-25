@@ -1,16 +1,65 @@
-<main>
-    <div>barra de progresso</div>
-    <a href="/login/voltar">voltar <- </a>
+<!-- Hero Section for Registration -->
+    <section id="register-hero" class="hero-section">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text animate-fade-in-up">
+                    <h1 class="hero-title">
+                        Junte-se à <span class="title-highlight">Aventura</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Crie sua conta e faça parte da comunidade que ama pets.
+                        <span class="text-highlight">Vamos começar com o seu nome.</span>
+                    </p>
+                </div>
+                <div class="register-form animate-fade-in-right" style="background: rgba(255, 255, 255, 0.95); padding: var(--spacing-3xl); border-radius: var(--radius-2xl); box-shadow: 0 20px 40px var(--shadow-heavy); max-width: 500px; width: 100%;">
+                    <!-- Progress Bar -->
+                    <div class="progress-container" style="margin-bottom: var(--spacing-2xl);">
+                        <div class="progress-bar" style="background: var(--background-light); border-radius: var(--radius-full); height: 8px; overflow: hidden;">
+                            <div class="progress-fill" style="background: linear-gradient(90deg, var(--accent-yellow), var(--secondary-blue)); height: 100%; width: 20%; border-radius: var(--radius-full); transition: width var(--transition-slow);"></div>
+                        </div>
+                        <div class="progress-steps" style="display: flex; justify-content: space-between; margin-top: var(--spacing-sm); font-size: var(--font-size-sm); color: var(--text-light);">
+                            <span class="active">Nome</span>
+                            <span>Contato</span>
+                            <span>Pet</span>
+                            <span>Preferências</span>
+                            <span>Fotos</span>
+                        </div>
+                    </div>
 
-    <h3>qual é seu nome</h3>
+                    <!-- Back Link -->
+                    <div style="margin-bottom: var(--spacing-xl);">
+                        <a href="/login" style="color: var(--primary-blue); text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: var(--spacing-sm);">
+                            <i class="fas fa-arrow-left"></i>
+                            Voltar ao Login
+                        </a>
+                    </div>
 
-    <form action="/nova-conta/contato" method="post">
-        <input type="text">
-        <p>avisos</p>
-        <input type="submit" value="seguinte">
-    </form>
+                    <!-- Form -->
+                    <form action="/nova-conta/contato" method="post">
+                        <div class="form-group" style="margin-bottom: var(--spacing-xl);">
+                            <label for="nome" style="display: block; margin-bottom: var(--spacing-sm); font-weight: 600; color: var(--text-dark); font-size: var(--font-size-lg);">Qual é o seu nome?</label>
+                            <div class="input-container">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required style="width: 100%; padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) 3rem; border: 2px solid var(--border-light); border-radius: var(--radius-lg); font-size: var(--font-size-base); transition: border-color var(--transition-base);" autofocus>
+                            </div>
+                            <p style="margin-top: var(--spacing-sm); font-size: var(--font-size-sm); color: var(--text-light);">Use seu nome real para que possamos nos conectar melhor.</p>
+                        </div>
 
-    
-     <p>imgame de exemplo</p>
-    <img src="/img/nome.jpeg">
-</main>
+                        <button type="submit" class="cta-btn primary" style="width: 100%; margin-bottom: var(--spacing-lg);">
+                            <span>Continuar</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+
+                    <!-- Example Image -->
+                    <div class="example-image" style="text-align: center; margin-top: var(--spacing-xl);">
+                        <img src="/img/nome.jpeg" alt="Exemplo de nome" style="max-width: 200px; height: auto; border-radius: var(--radius-lg); box-shadow: 0 8px 25px var(--shadow-light);">
+                        <p style="margin-top: var(--spacing-sm); font-size: var(--font-size-sm); color: var(--text-light);">Seu nome será usado para personalizar sua experiência</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

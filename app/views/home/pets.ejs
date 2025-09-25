@@ -1,51 +1,222 @@
 
-    <section id="pets" class="section-padding">
-        <div class="container">
-            <h2>Pets para Adoção</h2>
-            <p>Conheça nossos amiguinhos à espera de um lar. Adote e faça a diferença na vida deles!</p>
-
-            <div class="pet-cards">
-                <!-- Pet 1 -->
-                <div class="pet-card">
-                    <img src="/img/Zeus-cachorro_10.jpeg" alt="Rex" class="pet-image">
-                    <div class="pet-info">
-                        <h3>Rex</h3>
-                        <p>Cão amigável, adora crianças e brincadeiras. Muito carinhoso!</p>
-                        <button class="adotar-btn">Adotar</button>
+    <!-- Hero Section -->
+    <section id="pets-hero" class="hero-section">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text animate-fade-in-up">
+                    <h1 class="hero-title">
+                        <span class="title-highlight">Nossos</span> Pets<br>
+                        Disponíveis
+                    </h1>
+                    <p class="hero-subtitle">
+                        Conheça nossos amiguinhos à espera de um lar. Adote e faça a diferença na vida deles!
+                        <span class="text-highlight">Cada adoção é um ato de amor.</span>
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#pets-grid" class="cta-btn primary">
+                            <i class="fas fa-heart"></i>
+                            Ver Todos os Pets
+                        </a>
+                        <a href="#sobre" class="cta-btn secondary">
+                            <i class="fas fa-info-circle"></i>
+                            Como Adotar
+                        </a>
                     </div>
                 </div>
-
-                <!-- Pet 2 -->
-                <div class="pet-card">
-                    <img src="/img/e7a3bdaa-b32d-4883-909f-f8abbf77d554.jpg" alt="Luna" class="pet-image">
-                    <div class="pet-info">
-                        <h3>Luna</h3>
-                        <p>Gata carinhosa, ideal para um lar tranquilo e cheio de amor.</p>
-                        <button class="adotar-btn">Adotar</button>
+                <div class="hero-stats animate-fade-in-right">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="50">0</div>
+                        <div class="stat-label">Pets Disponíveis</div>
                     </div>
-                </div>
-
-                <!-- Pet 3 -->
-                <div class="pet-card">
-                    <img src="/img/adocao-de-cachorro-filhote-1200x795.webp" alt="Mel" class="pet-image">
-                    <div class="pet-info">
-                        <h3>Mel</h3>
-                        <p>Cãozinho pequeno e muito ativo. Ama correr e fazer novos amigos!</p>
-                        <button class="adotar-btn">Adotar</button>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="95">0</div>
+                        <div class="stat-label">% de Sucesso</div>
                     </div>
-                </div>
-
-                <!-- Pet 4 -->
-                <div class="pet-card">
-                    <img src="/img/c5d9ea77-de0a-41e6-b052-f5d29ba8f790.jpg" alt="Bella" class="pet-image">
-                    <div class="pet-info">
-                        <h3>Bella</h3>
-                        <p>Gata de pelo longo e super carinhosa, precisa de um lar aconchegante.</p>
-                        <button class="adotar-btn">Adotar</button>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="30">0</div>
+                        <div class="stat-label">Dias Médios</div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
     </section>
+
+    <!-- Pets Section -->
+    <section id="pets-grid" class="pets-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pets para Adoção</h2>
+                <p class="section-subtitle">Encontre o companheiro ideal para sua família</p>
+                <div class="section-divider"></div>
+            </div>
+            <div class="pets-grid">
+                <div class="pet-card" data-pet="rex">
+                    <div class="pet-image-container">
+                        <img src="/img/Zeus-cachorro_10.jpeg" alt="Rex" loading="lazy">
+                        <div class="pet-overlay">
+                            <div class="pet-actions">
+                                <button class="action-btn favorite" title="Favoritar">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-btn share" title="Compartilhar">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="pet-status">
+                            <span class="status-badge available">Disponível</span>
+                        </div>
+                    </div>
+                    <div class="pet-info">
+                        <h3 class="pet-name">Rex</h3>
+                        <div class="pet-details">
+                            <span class="pet-age"><i class="fas fa-calendar"></i> 3 anos</span>
+                            <span class="pet-breed"><i class="fas fa-dna"></i> Labrador</span>
+                        </div>
+                        <p class="pet-description">
+                            Cão amigável, adora crianças e brincadeiras. Muito carinhoso e cheio de energia!
+                        </p>
+                        <div class="pet-traits">
+                            <span class="trait">Brincalhão</span>
+                            <span class="trait">Carinhoso</span>
+                            <span class="trait">Sociável</span>
+                        </div>
+                        <button class="adopt-btn">
+                            <i class="fas fa-heart"></i>
+                            Adotar Rex
+                        </button>
+                    </div>
+                </div>
+
+                <div class="pet-card" data-pet="luna">
+                    <div class="pet-image-container">
+                        <img src="/img/e7a3bdaa-b32d-4883-909f-f8abbf77d554.jpg" alt="Luna" loading="lazy">
+                        <div class="pet-overlay">
+                            <div class="pet-actions">
+                                <button class="action-btn favorite" title="Favoritar">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-btn share" title="Compartilhar">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="pet-status">
+                            <span class="status-badge available">Disponível</span>
+                        </div>
+                    </div>
+                    <div class="pet-info">
+                        <h3 class="pet-name">Luna</h3>
+                        <div class="pet-details">
+                            <span class="pet-age"><i class="fas fa-calendar"></i> 2 anos</span>
+                            <span class="pet-breed"><i class="fas fa-dna"></i> Siamês</span>
+                        </div>
+                        <p class="pet-description">
+                            Gata carinhosa, ideal para um lar tranquilo e cheio de amor. Adora carinho!
+                        </p>
+                        <div class="pet-traits">
+                            <span class="trait">Carinhosa</span>
+                            <span class="trait">Tranquila</span>
+                            <span class="trait">Afetuosa</span>
+                        </div>
+                        <button class="adopt-btn">
+                            <i class="fas fa-heart"></i>
+                            Adotar Luna
+                        </button>
+                    </div>
+                </div>
+
+                <div class="pet-card" data-pet="mel">
+                    <div class="pet-image-container">
+                        <img src="/img/adocao-de-cachorro-filhote-1200x795.webp" alt="Mel" loading="lazy">
+                        <div class="pet-overlay">
+                            <div class="pet-actions">
+                                <button class="action-btn favorite" title="Favoritar">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-btn share" title="Compartilhar">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="pet-status">
+                            <span class="status-badge available">Disponível</span>
+                        </div>
+                    </div>
+                    <div class="pet-info">
+                        <h3 class="pet-name">Mel</h3>
+                        <div class="pet-details">
+                            <span class="pet-age"><i class="fas fa-calendar"></i> 8 meses</span>
+                            <span class="pet-breed"><i class="fas fa-dna"></i> SRD</span>
+                        </div>
+                        <p class="pet-description">
+                            Cachorrinha pequena e muito ativa. Ama correr e fazer novos amigos!
+                        </p>
+                        <div class="pet-traits">
+                            <span class="trait">Ativa</span>
+                            <span class="trait">Brincalhona</span>
+                            <span class="trait">Sociável</span>
+                        </div>
+                        <button class="adopt-btn">
+                            <i class="fas fa-heart"></i>
+                            Adotar Mel
+                        </button>
+                    </div>
+                </div>
+
+                <div class="pet-card" data-pet="bella">
+                    <div class="pet-image-container">
+                        <img src="/img/c5d9ea77-de0a-41e6-b052-f5d29ba8f790.jpg" alt="Bella" loading="lazy">
+                        <div class="pet-overlay">
+                            <div class="pet-actions">
+                                <button class="action-btn favorite" title="Favoritar">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-btn share" title="Compartilhar">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="pet-status">
+                            <span class="status-badge available">Disponível</span>
+                        </div>
+                    </div>
+                    <div class="pet-info">
+                        <h3 class="pet-name">Bella</h3>
+                        <div class="pet-details">
+                            <span class="pet-age"><i class="fas fa-calendar"></i> 1 ano</span>
+                            <span class="pet-breed"><i class="fas fa-dna"></i> Persa</span>
+                        </div>
+                        <p class="pet-description">
+                            Gata de pelo longo e super carinhosa, precisa de um lar aconchegante.
+                        </p>
+                        <div class="pet-traits">
+                            <span class="trait">Carinhosa</span>
+                            <span class="trait">Calma</span>
+                            <span class="trait">Independente</span>
+                        </div>
+                        <button class="adopt-btn">
+                            <i class="fas fa-heart"></i>
+                            Adotar Bella
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="section-footer">
+                <a class="view-more-btn" href="#contato">
+                    <span>Não encontrou o pet ideal?</span>
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Modal Detalhes do Pet -->
     <div id="modalPet" class="modal">
         <div class="modal-content">

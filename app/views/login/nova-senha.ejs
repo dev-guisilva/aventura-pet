@@ -1,11 +1,73 @@
+<!-- Hero Section for New Password -->
+    <section id="password-hero" class="hero-section">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text animate-fade-in-up">
+                    <h1 class="hero-title">
+                        Nova <span class="title-highlight">Senha</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Crie uma nova senha segura para sua conta.
+                        <span class="text-highlight">Mantenha sua conta protegida.</span>
+                    </p>
+                </div>
+                <div class="password-form animate-fade-in-right" style="background: rgba(255, 255, 255, 0.95); padding: var(--spacing-3xl); border-radius: var(--radius-2xl); box-shadow: 0 20px 40px var(--shadow-heavy); max-width: 400px; width: 100%;">
+                    <form action="/login/nova-senha" method="post">
+                        <div class="form-group" style="margin-bottom: var(--spacing-lg);">
+                            <label for="senha-1" style="display: block; margin-bottom: var(--spacing-sm); font-weight: 600; color: var(--text-dark);">Nova Senha</label>
+                            <div class="input-container">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="senha-1" name="senha-1" placeholder="Digite sua nova senha" required style="width: 100%; padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) 3rem; border: 2px solid var(--border-light); border-radius: var(--radius-lg); font-size: var(--font-size-base); transition: border-color var(--transition-base);" minlength="8">
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-bottom: var(--spacing-xl);">
+                            <label for="senha-2" style="display: block; margin-bottom: var(--spacing-sm); font-weight: 600; color: var(--text-dark);">Confirmar Senha</label>
+                            <div class="input-container">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="senha-2" name="senha-2" placeholder="Confirme sua nova senha" required style="width: 100%; padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) 3rem; border: 2px solid var(--border-light); border-radius: var(--radius-lg); font-size: var(--font-size-base); transition: border-color var(--transition-base);" minlength="8">
+                            </div>
+                            <p style="margin-top: var(--spacing-sm); font-size: var(--font-size-sm); color: var(--text-light);">A senha deve ter pelo menos 8 caracteres.</p>
+                        </div>
 
-<main>
-    <h1>nova senha</h1>
-    <form action="/login/nova-senha" method="post">
-        <label>Senha</label>
-        <input type="password" name="senha-1">
-        <label>Senha</label>
-        <input type="password" name="senha-2">
-  <input type="submit" value="recuperar">
-    </form>
-</main>
+                        <button type="submit" class="cta-btn primary" style="width: 100%; margin-bottom: var(--spacing-lg);">
+                            <i class="fas fa-save"></i>
+                            Atualizar Senha
+                        </button>
+                    </form>
+
+                    <div class="password-links" style="text-align: center;">
+                        <a href="/login" style="color: var(--primary-blue); text-decoration: none; font-weight: 500;">Voltar ao Login</a>
+                    </div>
+
+                    <div class="password-footer" style="margin-top: var(--spacing-xl); padding-top: var(--spacing-lg); border-top: 1px solid var(--border-light); text-align: center; font-size: var(--font-size-sm); color: var(--text-light);">
+                        <p>Sua senha foi atualizada com sucesso! Você pode fazer login agora.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Password confirmation validation
+        const senha1 = document.getElementById('senha-1');
+        const senha2 = document.getElementById('senha-2');
+        const submitBtn = document.querySelector('button[type="submit"]');
+
+        function validatePasswords() {
+            if (senha1.value !== senha2.value) {
+                senha2.style.borderColor = 'var(--error-red)';
+                submitBtn.disabled = true;
+                submitBtn.style.opacity = '0.6';
+            } else {
+                senha2.style.borderColor = 'var(--success-green)';
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = '1';
+            }
+        }
+
+        senha1.addEventListener('input', validatePasswords);
+        senha2.addEventListener('input', validatePasswords);
+    </script>

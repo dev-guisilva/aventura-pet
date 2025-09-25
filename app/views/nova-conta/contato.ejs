@@ -1,20 +1,86 @@
-<main>
-    <div>barra de progresso</div>
-    <a href="#">voltar <- </a>
-    <h1>DADOS DE CONTAO</h1>
-    <h5>avisos de privacidade</h5>
+<!-- Hero Section for Registration -->
+    <section id="register-hero" class="hero-section">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text animate-fade-in-up">
+                    <h1 class="hero-title">
+                        Dados de <span class="title-highlight">Contato</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Precisamos dessas informações para manter você conectado.
+                        <span class="text-highlight">Seus dados estão seguros conosco.</span>
+                    </p>
+                </div>
+                <div class="register-form animate-fade-in-right" style="background: rgba(255, 255, 255, 0.95); padding: var(--spacing-3xl); border-radius: var(--radius-2xl); box-shadow: 0 20px 40px var(--shadow-heavy); max-width: 500px; width: 100%;">
+                    <!-- Progress Bar -->
+                    <div class="progress-container" style="margin-bottom: var(--spacing-2xl);">
+                        <div class="progress-bar" style="background: var(--background-light); border-radius: var(--radius-full); height: 8px; overflow: hidden;">
+                            <div class="progress-fill" style="background: linear-gradient(90deg, var(--accent-yellow), var(--secondary-blue)); height: 100%; width: 40%; border-radius: var(--radius-full); transition: width var(--transition-slow);"></div>
+                        </div>
+                        <div class="progress-steps" style="display: flex; justify-content: space-between; margin-top: var(--spacing-sm); font-size: var(--font-size-sm); color: var(--text-light);">
+                            <span>✓ Nome</span>
+                            <span class="active">Contato</span>
+                            <span>Pet</span>
+                            <span>Preferências</span>
+                            <span>Fotos</span>
+                        </div>
+                    </div>
 
-    <p style="color: red; background-color: yellow; font-weight: bolder; font-size: 25px;" >os 3 inputs do tamanho igual na imagem</p>
-    <form action="/nova-conta/oque-fazer" method="post">
-        <label>telefone</label>
-        <input type="tel">
-        <label>email</label>
-        <input type="email">
-        <label>cep</label>
-        <input type="cep">
-        <input type="submit" value="SEGUINTE">
-    </form>
-</main>
+                    <!-- Back Link -->
+                    <div style="margin-bottom: var(--spacing-xl);">
+                        <a href="/nova-conta/nome" style="color: var(--primary-blue); text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: var(--spacing-sm);">
+                            <i class="fas fa-arrow-left"></i>
+                            Voltar
+                        </a>
+                    </div>
 
-<p>imgame de exemplo</p>
-<img src="/img/contato-1.jpeg">
+                    <!-- Privacy Notice -->
+                    <div class="privacy-notice" style="background: var(--background-light); padding: var(--spacing-lg); border-radius: var(--radius-lg); margin-bottom: var(--spacing-xl); border-left: 4px solid var(--accent-yellow);">
+                        <h5 style="margin: 0; color: var(--text-dark); font-weight: 600;">Avisos de Privacidade</h5>
+                        <p style="margin: var(--spacing-sm) 0 0 0; font-size: var(--font-size-sm); color: var(--text-light);">Seus dados pessoais são protegidos e utilizados apenas para melhorar sua experiência na plataforma.</p>
+                    </div>
+
+                    <!-- Form -->
+                    <form action="/nova-conta/oque-fazer" method="post">
+                        <div class="form-row" style="display: grid; grid-template-columns: 1fr; gap: var(--spacing-lg); margin-bottom: var(--spacing-xl);">
+                            <div class="form-group">
+                                <label for="telefone" style="display: block; margin-bottom: var(--spacing-sm); font-weight: 600; color: var(--text-dark);">Telefone</label>
+                                <div class="input-container">
+                                    <i class="fas fa-phone"></i>
+                                    <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required style="width: 100%; padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) 3rem; border: 2px solid var(--border-light); border-radius: var(--radius-lg); font-size: var(--font-size-base); transition: border-color var(--transition-base);">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" style="display: block; margin-bottom: var(--spacing-sm); font-weight: 600; color: var(--text-dark);">Email</label>
+                                <div class="input-container">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="email" name="email" placeholder="seu@email.com" required style="width: 100%; padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) 3rem; border: 2px solid var(--border-light); border-radius: var(--radius-lg); font-size: var(--font-size-base); transition: border-color var(--transition-base);">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="cep" style="display: block; margin-bottom: var(--spacing-sm); font-weight: 600; color: var(--text-dark);">CEP</label>
+                                <div class="input-container">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <input type="text" id="cep" name="cep" placeholder="00000-000" required style="width: 100%; padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) 3rem; border: 2px solid var(--border-light); border-radius: var(--radius-lg); font-size: var(--font-size-base); transition: border-color var(--transition-base);">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="cta-btn primary" style="width: 100%; margin-bottom: var(--spacing-lg);">
+                            <span>Continuar</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+
+                    <!-- Example Image -->
+                    <div class="example-image" style="text-align: center; margin-top: var(--spacing-xl);">
+                        <img src="/img/contato-1.jpeg" alt="Exemplo de contato" style="max-width: 200px; height: auto; border-radius: var(--radius-lg); box-shadow: 0 8px 25px var(--shadow-light);">
+                        <p style="margin-top: var(--spacing-sm); font-size: var(--font-size-sm); color: var(--text-light);">Essas informações nos ajudam a conectar você com a comunidade local</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
