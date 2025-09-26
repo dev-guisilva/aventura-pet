@@ -235,10 +235,10 @@ header .logo {
 }
 
 header .logo h1 {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-2xl);
     font-weight: 700;
     color: var(--text-white);
-    line-height: 32px;
+    line-height: 48px;
     margin: 0;
 }
 
@@ -281,7 +281,7 @@ header nav ul li a:hover::after {
 }
 
 header .logo img {
-    height: 32px;
+    height: 48px;
     width: auto;
 }
 
@@ -1051,3 +1051,4 @@ header .logo img {
 .newsletter-section p {
     font-size: var(--font-size-lg);
     opacity: 0.9;
+}

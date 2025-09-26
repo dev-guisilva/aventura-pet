@@ -9,8 +9,40 @@ const hamburger = document.getElementById('hamburger');
 const menu = document.querySelector('.menu-list');
 
 // Função para alternar a classe 'active' no menu
-hamburger.addEventListener('click', () => {
+function toggleMenu() {
     menu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+    document.body.classList.toggle('menu-open');
+
+    // Bloquear/desbloquear scroll do body
+    if (document.body.classList.contains('menu-open')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = '';
+    }
+}
+
+hamburger.addEventListener('click', toggleMenu);
+
+// Fechar menu ao clicar em um link
+menu.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
+        toggleMenu();
+    }
+});
+
+// Fechar menu ao clicar no overlay
+document.addEventListener('click', (e) => {
+    if (document.body.classList.contains('menu-open') && !menu.contains(e.target) && e.target !== hamburger) {
+        toggleMenu();
+    }
+});
+
+// Fechar menu ao redimensionar para desktop
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && document.body.classList.contains('menu-open')) {
+        toggleMenu();
+    }
 });
 
 // Exemplo simples para rolar o carrossel
