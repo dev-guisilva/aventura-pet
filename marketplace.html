@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Link para Font Awesome -->
+  <link rel="stylesheet" href="/css/sobre.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <link rel="stylesheet" href="/css/marketplace.css">
+</head>
+<body>
+    <!-- Cabeçalho com Menu Hamburguer -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="/" class="logo-link">
+                    <img class="logo-avtpet" src="/img/logo aventura pet.png" alt="logo aventura pet">
+                    <h1>AVENTURA PET</h1>
+                </a>
+            </div>
+
+            <!-- Menu de Navegação -->
+            <nav>
+                <ul class="menu-list">
+                    <li><a href="/home/pets">Pets</a></li>
+                    <li><a href="/home/loja">Loja</a></li>
+                    <li><a href="/home/sobre">Sobre</a></li>
+                    <li><a href="/home/contato">Contato</a></li>
+                </ul>
+
+                <div class="hamburger" id="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+
+                <!-- Ícone com submenu -->
+                <div class="menu-icone">
+                    <i class="fa-solid fa-user" aria-hidden="true"></i>
+                    <ul class="menu-opcoes">
+                        <li><a href="/login">Entrar</a></li>
+                        <li><a href="cadastro.html">Cadastrar</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section id="marketplace-hero" class="hero-section">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text animate-fade-in-up">
+                    <h1 class="hero-title">
+                        <span class="title-highlight">Produtos</span> para<br>
+                        seu Pet
+                    </h1>
+                    <p class="hero-subtitle">
+                        Tudo que seu companheiro precisa para uma vida feliz e saudável.
+                        <span class="text-highlight">Qualidade e carinho em cada item.</span>
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#produtos" class="cta-btn primary">
+                            <i class="fas fa-shopping-cart"></i>
+                            Explorar Produtos
+                        </a>
+                        <a href="#categorias" class="cta-btn secondary">
+                            <i class="fas fa-tags"></i>
+                            Ver Categorias
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-stats animate-fade-in-right">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="500">0</div>
+                        <div class="stat-label">Produtos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="50">0</div>
+                        <div class="stat-label">Marcas</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="24">0</div>
+                        <div class="stat-label">Entrega Rápida</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Filtros Section -->
+    <section id="categorias" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Categorias</h2>
+                <p class="section-subtitle">Encontre exatamente o que seu pet precisa</p>
+                <div class="section-divider"></div>
+            </div>
+            <div class="filtros">
+                <div class="categorias">
+                    <button data-categoria="todos" class="categoria-btn ativo">
+                        <i class="fas fa-th-large"></i>
+                        Todos
+                    </button>
+                    <button data-categoria="racao" class="categoria-btn">
+                        <i class="fas fa-utensils"></i>
+                        Rações
+                    </button>
+                    <button data-categoria="brinquedo" class="categoria-btn">
+                        <i class="fas fa-gamepad"></i>
+                        Brinquedos
+                    </button>
+                    <button data-categoria="acessorio" class="categoria-btn">
+                        <i class="fas fa-heart"></i>
+                        Acessórios
+                    </button>
+                </div>
+                <div class="busca">
+                    <div class="search-container">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="campoBusca" placeholder="Buscar produto...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos Section -->
+    <section id="produtos" class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Produtos em Destaque</h2>
+                <p class="section-subtitle">Seleção especial para o bem-estar do seu pet</p>
+                <div class="section-divider"></div>
+            </div>
+            <div class="products-carousel">
+                <div class="carousel-container">
+                    <button class="carousel-btn prev" aria-label="Anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-track">
+                        <div class="product-card" data-categoria="racao">
+                            <div class="product-image">
+                                <img src="/img/OIP.webp" alt="Ração Premium Gatos" loading="lazy">
+                                <div class="product-badge">
+                                    <span>-15%</span>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Ração Premium Gatos - 10kg</h3>
+                                <div class="product-price">
+                                    <span class="price-current">R$ 279,90</span>
+                                    <span class="price-original">R$ 329,90</span>
+                                </div>
+                                <button class="buy-btn">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Comprar Agora
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card" data-categoria="brinquedo">
+                            <div class="product-image">
+                                <img src="/img/OIP (1).webp" alt="Casa de Madeira para Pet" loading="lazy">
+                                <div class="product-badge">
+                                    <span>-20%</span>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Casa de Madeira para Pet</h3>
+                                <div class="product-price">
+                                    <span class="price-current">R$ 149,90</span>
+                                    <span class="price-original">R$ 187,90</span>
+                                </div>
+                                <button class="buy-btn">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Comprar Agora
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card" data-categoria="acessorio">
+                            <div class="product-image">
+                                <img src="/img/pote de ração.webp" alt="Pote de Ração Automático" loading="lazy">
+                                <div class="product-badge">
+                                    <span>-10%</span>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Pote de Ração Automático</h3>
+                                <div class="product-price">
+                                    <span class="price-current">R$ 99,90</span>
+                                    <span class="price-original">R$ 111,90</span>
+                                </div>
+                                <button class="buy-btn">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Comprar Agora
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn next" aria-label="Próximo">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="carousel-dots">
+                    <button class="dot active" data-slide="0"></button>
+                    <button class="dot" data-slide="1"></button>
+                    <button class="dot" data-slide="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>document.getElementById('current-page').textContent = 'Loja';</script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
